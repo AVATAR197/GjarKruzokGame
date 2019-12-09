@@ -1,0 +1,1035 @@
+
+Ninja.png
+size: 4096,2048
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+0_Fallen_Angels_Dying
+  rotate: false
+  xy: 2, 1818
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 3
+0_Fallen_Angels_Dying
+  rotate: false
+  xy: 2, 1591
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 4
+0_Fallen_Angels_Dying
+  rotate: false
+  xy: 2, 1364
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 6
+0_Fallen_Angels_Dying
+  rotate: false
+  xy: 229, 1591
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 7
+0_Fallen_Angels_Dying
+  rotate: false
+  xy: 456, 1818
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 8
+0_Fallen_Angels_Dying
+  rotate: false
+  xy: 2, 1137
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 9
+0_Fallen_Angels_Dying
+  rotate: false
+  xy: 2, 456
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 10
+0_Fallen_Angels_Dying
+  rotate: false
+  xy: 229, 683
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 11
+0_Fallen_Angels_Dying
+  rotate: false
+  xy: 229, 683
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 13
+0_Fallen_Angels_Dying
+  rotate: false
+  xy: 229, 683
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 12
+0_Fallen_Angels_Dying
+  rotate: false
+  xy: 229, 683
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 14
+0_Fallen_Angels_Dying
+  rotate: false
+  xy: 229, 2
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 5
+0_Fallen_Angels_Dying
+  rotate: false
+  xy: 3634, 1137
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 1
+0_Fallen_Angels_Dying
+  rotate: false
+  xy: 3861, 1364
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 2
+0_Fallen_Angels_Hurt
+  rotate: false
+  xy: 229, 1364
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 5
+0_Fallen_Angels_Hurt
+  rotate: false
+  xy: 456, 910
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 10
+0_Fallen_Angels_Hurt
+  rotate: false
+  xy: 910, 1137
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 0
+0_Fallen_Angels_Dying
+  rotate: false
+  xy: 910, 1137
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 0
+0_Fallen_Angels_Hurt
+  rotate: false
+  xy: 1137, 1364
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 1
+0_Fallen_Angels_Hurt
+  rotate: false
+  xy: 1591, 1818
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 3
+0_Fallen_Angels_Hurt
+  rotate: false
+  xy: 2, 2
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 4
+0_Fallen_Angels_Hurt
+  rotate: false
+  xy: 456, 456
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 6
+0_Fallen_Angels_Hurt
+  rotate: false
+  xy: 683, 683
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 7
+0_Fallen_Angels_Hurt
+  rotate: false
+  xy: 910, 910
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 8
+0_Fallen_Angels_Hurt
+  rotate: false
+  xy: 1137, 1137
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 9
+0_Fallen_Angels_Hurt
+  rotate: false
+  xy: 910, 683
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 11
+0_Fallen_Angels_Hurt
+  rotate: false
+  xy: 2953, 1364
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 2
+0_Fallen_Angels_Idle
+  rotate: false
+  xy: 2, 229
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 14
+0_Fallen_Angels_Idle
+  rotate: false
+  xy: 229, 456
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 9
+0_Fallen_Angels_Idle
+  rotate: false
+  xy: 1591, 1364
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 7
+0_Fallen_Angels_Idle
+  rotate: false
+  xy: 1818, 1591
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 11
+0_Fallen_Angels_Idle
+  rotate: false
+  xy: 2272, 1591
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 1
+0_Fallen_Angels_Idle
+  rotate: false
+  xy: 2499, 1818
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 2
+0_Fallen_Angels_Idle
+  rotate: false
+  xy: 910, 2
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 3
+0_Fallen_Angels_Idle
+  rotate: false
+  xy: 1137, 229
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 4
+0_Fallen_Angels_Idle
+  rotate: false
+  xy: 1591, 683
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 6
+0_Fallen_Angels_Idle
+  rotate: false
+  xy: 2499, 1364
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 10
+0_Fallen_Angels_Idle
+  rotate: false
+  xy: 2953, 1818
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 12
+0_Fallen_Angels_Idle
+  rotate: false
+  xy: 1364, 2
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 13
+0_Fallen_Angels_Idle
+  rotate: false
+  xy: 1818, 456
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 15
+0_Fallen_Angels_Idle
+  rotate: false
+  xy: 2045, 683
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 16
+0_Fallen_Angels_Idle
+  rotate: false
+  xy: 2272, 910
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 17
+0_Fallen_Angels_Idle
+  rotate: false
+  xy: 2499, 229
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 5
+0_Fallen_Angels_Idle
+  rotate: false
+  xy: 2953, 683
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 8
+0_Fallen_Angels_Jump Loop
+  rotate: false
+  xy: 1137, 1818
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 4
+0_Fallen_Angels_Jump Loop
+  rotate: false
+  xy: 229, 229
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 0
+0_Fallen_Angels_Jump Loop
+  rotate: false
+  xy: 1364, 1364
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 5
+0_Fallen_Angels_Jump Loop
+  rotate: false
+  xy: 2499, 1591
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 2
+0_Fallen_Angels_Jump Loop
+  rotate: false
+  xy: 2045, 456
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 3
+0_Fallen_Angels_Jump Loop
+  rotate: false
+  xy: 3180, 910
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 1
+0_Fallen_Angels_Jump Start
+  rotate: false
+  xy: 1364, 1591
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 5
+0_Fallen_Angels_Jump Start
+  rotate: false
+  xy: 1591, 1137
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 2
+0_Fallen_Angels_Jump Start
+  rotate: false
+  xy: 1818, 2
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 0
+0_Fallen_Angels_Idle
+  rotate: false
+  xy: 1818, 2
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 0
+0_Fallen_Angels_Jump Start
+  rotate: false
+  xy: 2045, 229
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 1
+0_Fallen_Angels_Jump Start
+  rotate: false
+  xy: 2499, 683
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 3
+0_Fallen_Angels_Jump Start
+  rotate: false
+  xy: 2726, 910
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 4
+0_Fallen_Angels_Run Slashing
+  rotate: false
+  xy: 456, 1591
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 0
+0_Fallen_Angels_Run Slashing
+  rotate: false
+  xy: 683, 1818
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 1
+0_Fallen_Angels_Run Slashing
+  rotate: false
+  xy: 2, 910
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 2
+0_Fallen_Angels_Run Slashing
+  rotate: false
+  xy: 229, 1137
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 3
+0_Fallen_Angels_Run Slashing
+  rotate: false
+  xy: 456, 1364
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 4
+0_Fallen_Angels_Run Slashing
+  rotate: false
+  xy: 683, 1591
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 5
+0_Fallen_Angels_Run Slashing
+  rotate: false
+  xy: 910, 1818
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 6
+0_Fallen_Angels_Run Slashing
+  rotate: false
+  xy: 2, 683
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 7
+0_Fallen_Angels_Run Slashing
+  rotate: false
+  xy: 229, 910
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 8
+0_Fallen_Angels_Run Slashing
+  rotate: false
+  xy: 456, 1137
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 9
+0_Fallen_Angels_Run Slashing
+  rotate: false
+  xy: 683, 1137
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 10
+0_Fallen_Angels_Run Slashing
+  rotate: false
+  xy: 910, 1364
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 11
+0_Fallen_Angels_Run Throwing
+  rotate: false
+  xy: 910, 456
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 9
+0_Fallen_Angels_Run Throwing
+  rotate: false
+  xy: 1364, 683
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 0
+0_Fallen_Angels_Run Throwing
+  rotate: false
+  xy: 1591, 910
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 1
+0_Fallen_Angels_Run Throwing
+  rotate: false
+  xy: 1818, 1137
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 2
+0_Fallen_Angels_Run Throwing
+  rotate: false
+  xy: 2045, 1364
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 3
+0_Fallen_Angels_Run Throwing
+  rotate: false
+  xy: 1364, 229
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 4
+0_Fallen_Angels_Run Throwing
+  rotate: false
+  xy: 1818, 683
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 10
+0_Fallen_Angels_Run Throwing
+  rotate: false
+  xy: 2045, 910
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 11
+0_Fallen_Angels_Run Throwing
+  rotate: false
+  xy: 1818, 229
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 5
+0_Fallen_Angels_Run Throwing
+  rotate: false
+  xy: 2272, 456
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 8
+0_Fallen_Angels_Run Throwing
+  rotate: false
+  xy: 3180, 1364
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 7
+0_Fallen_Angels_Run Throwing
+  rotate: false
+  xy: 2726, 456
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 6
+0_Fallen_Angels_Running
+  rotate: false
+  xy: 2272, 683
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 0
+0_Fallen_Angels_Running
+  rotate: false
+  xy: 2272, 229
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 1
+0_Fallen_Angels_Running
+  rotate: false
+  xy: 2499, 456
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 2
+0_Fallen_Angels_Running
+  rotate: false
+  xy: 2726, 683
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 3
+0_Fallen_Angels_Running
+  rotate: false
+  xy: 2953, 910
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 4
+0_Fallen_Angels_Running
+  rotate: false
+  xy: 3180, 1137
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 5
+0_Fallen_Angels_Running
+  rotate: false
+  xy: 3407, 1364
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 6
+0_Fallen_Angels_Running
+  rotate: false
+  xy: 3634, 1591
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 7
+0_Fallen_Angels_Running
+  rotate: false
+  xy: 3861, 1818
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 8
+0_Fallen_Angels_Running
+  rotate: false
+  xy: 2272, 2
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 9
+0_Fallen_Angels_Running
+  rotate: false
+  xy: 3407, 1137
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 10
+0_Fallen_Angels_Running
+  rotate: false
+  xy: 3634, 1364
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 11
+0_Fallen_Angels_Slashing
+  rotate: false
+  xy: 683, 1364
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 10
+0_Fallen_Angels_Slashing
+  rotate: false
+  xy: 910, 1591
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 11
+0_Fallen_Angels_Slashing
+  rotate: false
+  xy: 1137, 1591
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 8
+0_Fallen_Angels_Slashing
+  rotate: false
+  xy: 1591, 1591
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 6
+0_Fallen_Angels_Slashing
+  rotate: false
+  xy: 1818, 1818
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 9
+0_Fallen_Angels_Slashing
+  rotate: false
+  xy: 2272, 1818
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 7
+0_Fallen_Angels_Slashing
+  rotate: false
+  xy: 2726, 1591
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 4
+0_Fallen_Angels_Slashing
+  rotate: false
+  xy: 2499, 2
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 0
+0_Fallen_Angels_Slashing
+  rotate: false
+  xy: 2726, 229
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 2
+0_Fallen_Angels_Slashing
+  rotate: false
+  xy: 2953, 456
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 3
+0_Fallen_Angels_Slashing
+  rotate: false
+  xy: 3407, 910
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 5
+0_Fallen_Angels_Sliding
+  rotate: false
+  xy: 1364, 1818
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 4
+0_Fallen_Angels_Sliding
+  rotate: false
+  xy: 910, 229
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 1
+0_Fallen_Angels_Sliding
+  rotate: false
+  xy: 2726, 1137
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 0
+0_Fallen_Angels_Sliding
+  rotate: false
+  xy: 3180, 1591
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 2
+0_Fallen_Angels_Sliding
+  rotate: false
+  xy: 3407, 1818
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 3
+0_Fallen_Angels_Sliding
+  rotate: false
+  xy: 3180, 683
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 5
+0_Fallen_Angels_Throwing
+  rotate: false
+  xy: 683, 910
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 6
+0_Fallen_Angels_Throwing
+  rotate: false
+  xy: 1137, 910
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 10
+0_Fallen_Angels_Throwing
+  rotate: false
+  xy: 1364, 1137
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 3
+0_Fallen_Angels_Throwing
+  rotate: false
+  xy: 2045, 1818
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 0
+0_Fallen_Angels_Throwing
+  rotate: false
+  xy: 456, 2
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 1
+0_Fallen_Angels_Slashing
+  rotate: false
+  xy: 456, 2
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 1
+0_Fallen_Angels_Throwing
+  rotate: false
+  xy: 683, 229
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 2
+0_Fallen_Angels_Throwing
+  rotate: false
+  xy: 1137, 683
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 4
+0_Fallen_Angels_Throwing
+  rotate: false
+  xy: 1364, 910
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 5
+0_Fallen_Angels_Throwing
+  rotate: false
+  xy: 1818, 1364
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 7
+0_Fallen_Angels_Throwing
+  rotate: false
+  xy: 2045, 1591
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 8
+0_Fallen_Angels_Throwing
+  rotate: false
+  xy: 1591, 456
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 11
+0_Fallen_Angels_Throwing
+  rotate: false
+  xy: 2499, 910
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 9
+0_Fallen_Angels_Walking
+  rotate: false
+  xy: 229, 1818
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 1
+0_Fallen_Angels_Walking
+  rotate: false
+  xy: 456, 683
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 12
+0_Fallen_Angels_Walking
+  rotate: false
+  xy: 456, 229
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 13
+0_Fallen_Angels_Walking
+  rotate: false
+  xy: 683, 456
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 7
+0_Fallen_Angels_Walking
+  rotate: false
+  xy: 683, 2
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 10
+0_Fallen_Angels_Walking
+  rotate: false
+  xy: 1137, 456
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 14
+0_Fallen_Angels_Walking
+  rotate: false
+  xy: 1364, 456
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 2
+0_Fallen_Angels_Walking
+  rotate: false
+  xy: 1818, 910
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 4
+0_Fallen_Angels_Walking
+  rotate: false
+  xy: 2045, 1137
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 5
+0_Fallen_Angels_Walking
+  rotate: false
+  xy: 2272, 1364
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 6
+0_Fallen_Angels_Walking
+  rotate: false
+  xy: 2726, 1818
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 8
+0_Fallen_Angels_Walking
+  rotate: false
+  xy: 1137, 2
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 9
+0_Fallen_Angels_Walking
+  rotate: false
+  xy: 2272, 1137
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 21
+0_Fallen_Angels_Walking
+  rotate: false
+  xy: 1591, 229
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 11
+0_Fallen_Angels_Walking
+  rotate: false
+  xy: 2499, 1137
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 15
+0_Fallen_Angels_Walking
+  rotate: false
+  xy: 2726, 1364
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 16
+0_Fallen_Angels_Walking
+  rotate: false
+  xy: 2953, 1591
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 17
+0_Fallen_Angels_Walking
+  rotate: false
+  xy: 3180, 1818
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 18
+0_Fallen_Angels_Walking
+  rotate: false
+  xy: 1591, 2
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 19
+0_Fallen_Angels_Walking
+  rotate: false
+  xy: 2953, 1137
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 20
+0_Fallen_Angels_Walking
+  rotate: false
+  xy: 3407, 1591
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 22
+0_Fallen_Angels_Walking
+  rotate: false
+  xy: 3634, 1818
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 23
+0_Fallen_Angels_Walking
+  rotate: false
+  xy: 2045, 2
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 0
+0_Fallen_Angels_Walking
+  rotate: false
+  xy: 3861, 1591
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: 3
