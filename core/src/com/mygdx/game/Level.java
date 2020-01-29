@@ -24,6 +24,7 @@ public class Level {
 
         //creating objects with tileMapRenderer
         TileMapRenderer.buildShapes(map, world, PPM);
+        TileMapRenderer.buildCoins(map, world, PPM);
 
     }
     public void draw(SpriteBatch spriteBatch, OrthographicCamera camera) {

@@ -17,8 +17,10 @@ import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.physics.box2d.Shape;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.Array;
+import com.mygdx.game.figures.Coin;
 
 public class TileMapRenderer {
+    private Coin coin;
 
     public static Array<Body> buildShapes(Map map, World world, float PPM) {
         MapObjects objects = map.getLayers().get(1).getObjects();
@@ -57,6 +59,42 @@ public class TileMapRenderer {
         }
         return bodies;
     }
+
+    public static Array<Body> buildCoins(Map map, World world, float PPM) {
+        MapObjects coins = map.getLayers().get(3).getObjects();
+
+        Array<Body> coinsBodies = new Array<Body>();
+
+        for(MapObject object : coins) {
+
+            if (object instanceof TextureMapObject) {
+                continue;
+            }
+
+            Shape shape;
+
+            if (object instanceof RectangleMapObject) {
+                shape = getRectangle((RectangleMapObject)object, PPM);
+            }
+            else if (object instanceof PolygonMapObject) {
+                shape = getPolygon((PolygonMapObject)object, PPM);
+            }
+            else if (object instanceof CircleMapObject) {
+                shape = getCircle((CircleMapObject)object, PPM);
+            }
+            else {
+                continue;
+            }
+
+            Coin coin = new Coin(world, shape);
+
+            coinsBodies.add(coin.body);
+
+            shape.dispose();
+        }
+        return coinsBodies;
+    }
+
 
     private static PolygonShape getRectangle(RectangleMapObject rectangleObject, float PPM) {
         Rectangle rectangle = rectangleObject.getRectangle();
