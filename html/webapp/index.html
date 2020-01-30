@@ -12,7 +12,20 @@
        <body>
               <a class="superdev" href="javascript:%7B%20window.__gwt_bookmarklet_params%20%3D%20%7B'server_url'%3A'http%3A%2F%2Flocalhost%3A9876%2F'%7D%3B%20var%20s%20%3D%20document.createElement('script')%3B%20s.src%20%3D%20'http%3A%2F%2Flocalhost%3A9876%2Fdev_mode_on.js'%3B%20void(document.getElementsByTagName('head')%5B0%5D.appendChild(s))%3B%7D">&#8635;</a>
               <div align="center" id="embed-html"></div>
+              <button class="button">Contact Server</button>
               <script type="text/javascript" src="html/html.nocache.js"></script>
+
+              <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+              <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+
+              <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+              <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-analytics.js"></script>
+
+              <!-- Add Firebase products that you want to use -->
+              <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
+              <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script>
+
+              <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
        </body>
 
        <script>
@@ -31,5 +44,31 @@
               }
               document.getElementById('embed-html').addEventListener('mousedown', handleMouseDown, false);
               document.getElementById('embed-html').addEventListener('mouseup', handleMouseUp, false);
+
+              var firebaseConfig = {
+                  apiKey: "AIzaSyC-ZfU7EsGcHopApQp3IINdi6SGai4XtlQ",
+                  authDomain: "gjarkruzok.firebaseapp.com",
+                  databaseURL: "https://gjarkruzok.firebaseio.com",
+                  projectId: "gjarkruzok",
+                  storageBucket: "gjarkruzok.appspot.com",
+                  messagingSenderId: "205854186903",
+                  appId: "1:205854186903:web:4374b7922916e3f99478d2"
+                };
+                // Initialize Firebase
+
+                firebase.initializeApp(firebaseConfig);
+
+              document.querySelector('.button').addEventListener('click', () => writeUserData());
+              function writeUserData(writeMessage) {
+                firebase.database().ref('data/').set({
+                     bye: writeMessage
+                });
+              }
+
+              var starCountRef = firebase.database().ref('data/');
+                                   starCountRef.on('value', function(snapshot) {
+                                     //updateStarCount(postElement, snapshot.val());
+                                     console.log(snapshot.val());
+                                   });
        </script>
 </html>

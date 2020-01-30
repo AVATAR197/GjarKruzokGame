@@ -17,7 +17,7 @@ import com.badlogic.gdx.physics.box2d.WorldManifold;
 import com.badlogic.gdx.utils.Array;
 import com.mygdx.game.figures.Character;
 
-public class Project1<PPM> extends ApplicationAdapter {
+public class Project1 extends ApplicationAdapter {
 	//spritebatch definition
 	private SpriteBatch spriteBatch;
 
@@ -39,6 +39,16 @@ public class Project1<PPM> extends ApplicationAdapter {
 	//level
 	private Level level;
 
+	private GameListener listener;
+
+	public Project1 (GameListener listener) {
+		super();
+		this.listener = listener;
+	}
+
+	public Project1 () {
+		super();
+	}
 
 	@Override
 	public void create () {
@@ -68,6 +78,8 @@ public class Project1<PPM> extends ApplicationAdapter {
 			@Override
 			public void beginContact(Contact contact) {
 
+
+				//listener.updateScore(score);
 			}
 
 			@Override

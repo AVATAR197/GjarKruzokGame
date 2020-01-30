@@ -7,6 +7,11 @@ import com.mygdx.game.Project1;
 
 public class HtmlLauncher extends GwtApplication {
 
+
+        public static native int updateHtml(int score) /*-{
+                alert(score);
+        }-*/;
+
         // USE THIS CODE FOR A FIXED SIZE APPLICATION
         @Override
         public GwtApplicationConfiguration getConfig () {
@@ -48,4 +53,6 @@ public class HtmlLauncher extends GwtApplication {
         public ApplicationListener createApplicationListener () {
                 return new Project1();
         }
+
+        @Override
 }

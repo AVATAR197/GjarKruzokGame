@@ -53,7 +53,8 @@ public class Character {
         //giving the starting position for the character
         bdef.position.set(10f, 10f);
         body = world.createBody(bdef);
-        body.setBullet(true);
+        //body.setBullet(true);
+        body.setUserData("character");
 
         CircleShape circleShape = new CircleShape();
         //setting the radius of the circle
@@ -67,7 +68,7 @@ public class Character {
         fdef.restitution = 0f;
 
         fixture = body.createFixture(fdef);
-        body.setUserData(this);
+        //body.setUserData(this);
         circleShape.dispose();
 
 
