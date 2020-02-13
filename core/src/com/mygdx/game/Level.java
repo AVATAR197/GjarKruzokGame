@@ -1,5 +1,6 @@
 package com.mygdx.game;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.maps.tiled.TiledMap;
@@ -37,12 +38,12 @@ public class Level {
         tiledMapRenderer.render();
     }
 
-    private void update(OrthographicCamera camera) {
+    private void update(OrthographicCamera camera, World world) {
         tiledMapRenderer.setView(camera);
 
-        for(int i = 0; i < coins.length; i++) {
-            if(coins[i].isDestroyed) {
-                coins[i].consume();
+        for(int i = 0; i < coins.size; i++) {
+            if(coins.items[i].isDestroyed) {
+                coins.items[i].consume(world);
             }
         }
     }
