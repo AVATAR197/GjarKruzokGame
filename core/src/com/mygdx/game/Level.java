@@ -6,6 +6,8 @@ import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.TmxMapLoader;
 import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
 import com.badlogic.gdx.physics.box2d.World;
+import com.badlogic.gdx.utils.Array;
+import com.mygdx.game.figures.Coin;
 import com.mygdx.game.utils.TileMapRenderer;
 
 public class Level {
@@ -13,7 +15,7 @@ public class Level {
     //tiles
     private OrthogonalTiledMapRenderer tiledMapRenderer;
     private TiledMap map;
-
+    private Array<Coin> coins;
 
 
     public Level(World world, float PPM) {
@@ -24,9 +26,10 @@ public class Level {
 
         //creating objects with tileMapRenderer
         TileMapRenderer.buildShapes(map, world, PPM);
-        TileMapRenderer.buildCoins(map, world, PPM);
+        coins = TileMapRenderer.buildCoins(map, world, PPM);
 
     }
+
     public void draw(SpriteBatch spriteBatch, OrthographicCamera camera) {
         update(camera);
 
@@ -36,5 +39,11 @@ public class Level {
 
     private void update(OrthographicCamera camera) {
         tiledMapRenderer.setView(camera);
+
+        for(int i = 0; i < coins.length; i++) {
+            if(coins[i].isDestroyed) {
+                coins[i].consume();
+            }
+        }
     }
 }

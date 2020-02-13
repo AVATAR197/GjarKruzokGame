@@ -14,6 +14,7 @@ import com.badlogic.gdx.physics.box2d.World;
 
 public class Coin {
     public Body body;
+    public Boolean isDestroyed = false;
     private ContactListener contactListener;
 
     public Coin(World world, Shape shape) {
@@ -30,11 +31,7 @@ public class Coin {
 
             @Override
             public void beginContact(Contact contact) {
-                Fixture fixtureA = contact.getFixtureA();
-                Fixture fixtureB = contact.getFixtureB();
-                if(fixtureA.getBody().getUserData() == "coin" && fixtureB.getBody().getUserData() == "character" || fixtureA.getBody().getUserData() == "character" && fixtureB.getBody().getUserData() == "coin") {
-                    consume(world);
-                }
+
             }
 
             @Override
@@ -49,7 +46,13 @@ public class Coin {
 
             @Override
             public void postSolve(Contact contact, ContactImpulse impulse) {
+                Fixture fixtureA = contact.getFixtureA();
+                Fixture fixtureB = contact.getFixtureB();
 
+                if(fixtureA.getBody().getUserData() == "coin" && fixtureB.getBody().getUserData() == "character" || fixtureA.getBody().getUserData() == "character" && fixtureB.getBody().getUserData() == "coin") {
+                    isDestroyed = true;
+                    //consume(world);
+                }
             }
 
         });
