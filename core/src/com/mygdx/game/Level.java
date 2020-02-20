@@ -52,9 +52,9 @@ public class Level {
                 arrayToAddCoins.add(coins.get(i));
             }
         }
-        coins.removeRange(0, coins.size - 1 );
+        coins.clear();
         coins.addAll(arrayToAddCoins);
-
+        arrayToAddCoins.clear();
     }
 }
 
