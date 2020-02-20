@@ -16,23 +16,27 @@ public class Level {
     //tiles
     private OrthogonalTiledMapRenderer tiledMapRenderer;
     private TiledMap map;
+    private World world;
     private Array<Coin> coins;
+    private Array<Coin> arrayToAddCoins;
 
 
     public Level(World world, float PPM) {
-
         //rendering all the tiles of you TiledMap
         map = new TmxMapLoader().load("level-2.tmx");
         tiledMapRenderer = new OrthogonalTiledMapRenderer(map, 1 / PPM);
 
         //creating objects with tileMapRenderer
         TileMapRenderer.buildShapes(map, world, PPM);
-        coins = TileMapRenderer.buildCoins(map, world, PPM);
+        TileMapRenderer.buildCoins(map, world, PPM);
 
+        coins = TileMapRenderer.coinsArray;
+
+        arrayToAddCoins = new Array<Coin>();
     }
 
-    public void draw(SpriteBatch spriteBatch, OrthographicCamera camera) {
-        update(camera);
+    public void draw(SpriteBatch spriteBatch, OrthographicCamera camera, World world) {
+        update(camera, world);
 
         //rendering tiles
         tiledMapRenderer.render();
@@ -42,9 +46,15 @@ public class Level {
         tiledMapRenderer.setView(camera);
 
         for(int i = 0; i < coins.size; i++) {
-            if(coins.items[i].isDestroyed) {
-                coins.items[i].consume(world);
+            if (coins.get(i).isDestroyed) {
+                coins.get(i).consume(world);
+            } else {
+                arrayToAddCoins.add(coins.get(i));
             }
         }
+        coins.removeRange(0, coins.size - 1 );
+        coins.addAll(arrayToAddCoins);
+
     }
 }
+

@@ -121,7 +121,7 @@ public class Project1 extends ApplicationAdapter {
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
 
-		level.draw(spriteBatch, camera);
+		level.draw(spriteBatch, camera, world);
 
 		//drawing objects
 		spriteBatch.begin();

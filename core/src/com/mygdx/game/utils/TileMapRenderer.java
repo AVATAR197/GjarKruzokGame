@@ -19,8 +19,10 @@ import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.Array;
 import com.mygdx.game.figures.Coin;
 
+import java.util.Queue;
+
 public class TileMapRenderer {
-    private Coin coin;
+    public static Array<Coin> coinsArray;
 
     public static Array<Body> buildShapes(Map map, World world, float PPM) {
         MapObjects objects = map.getLayers().get(1).getObjects();
@@ -60,11 +62,11 @@ public class TileMapRenderer {
         return bodies;
     }
 
-    public static Array<Coin> buildCoins(Map map, World world, float PPM) {
+    public static Array<Body> buildCoins(Map map, World world, float PPM) {
         MapObjects coins = map.getLayers().get(3).getObjects();
 
-        Array<Coin> coinObjects = new Array<Coin>();
-
+        Array<Body> coinObjects = new Array<Body>();
+        coinsArray = new Array<Coin>();
 
         for(MapObject object : coins) {
 
@@ -89,7 +91,8 @@ public class TileMapRenderer {
 
             Coin coin = new Coin(world, shape);
 
-            coinObjects.add(coin);
+            coinObjects.add(coin.body);
+            coinsArray.add(coin);
 
             shape.dispose();
         }
