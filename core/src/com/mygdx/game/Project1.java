@@ -11,11 +11,13 @@ import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.physics.box2d.Contact;
 import com.badlogic.gdx.physics.box2d.ContactImpulse;
 import com.badlogic.gdx.physics.box2d.ContactListener;
+import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.Manifold;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.physics.box2d.WorldManifold;
 import com.badlogic.gdx.utils.Array;
 import com.mygdx.game.figures.Character;
+import com.mygdx.game.figures.Coin;
 
 public class Project1 extends ApplicationAdapter {
 	//spritebatch definition
@@ -77,8 +79,6 @@ public class Project1 extends ApplicationAdapter {
 		world.setContactListener(new ContactListener() {
 			@Override
 			public void beginContact(Contact contact) {
-
-
 				//listener.updateScore(score);
 			}
 
@@ -94,7 +94,15 @@ public class Project1 extends ApplicationAdapter {
 
 			@Override
 			public void postSolve(Contact contact, ContactImpulse impulse) {
+				Fixture fixtureA = contact.getFixtureA();
+				Fixture fixtureB = contact.getFixtureB();
 
+				if(fixtureA.getUserData() == "coin" && fixtureB.getUserData() == "character") {
+					((Coin) fixtureA.getBody().getUserData()).setForConsume();
+				}
+				if (fixtureA.getUserData() == "character" && fixtureB.getUserData() == "coin") {
+					((Coin) fixtureA.getBody().getUserData()).setForConsume();
+				}
 			}
 		});
 
@@ -130,7 +138,7 @@ public class Project1 extends ApplicationAdapter {
 		spriteBatch.end();
 
 		//debugRenderer
-		//debugRenderer.render(world, camera.combined);
+		debugRenderer.render(world, camera.combined);
 	}
 
 	public void update(float deltaTime) {

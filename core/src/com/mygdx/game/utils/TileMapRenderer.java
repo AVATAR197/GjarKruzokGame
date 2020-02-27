@@ -62,10 +62,9 @@ public class TileMapRenderer {
         return bodies;
     }
 
-    public static Array<Body> buildCoins(Map map, World world, float PPM) {
+    public static void buildCoins(Map map, World world, float PPM) {
         MapObjects coins = map.getLayers().get(3).getObjects();
 
-        Array<Body> coinObjects = new Array<Body>();
         coinsArray = new Array<Coin>();
 
         for(MapObject object : coins) {
@@ -89,14 +88,12 @@ public class TileMapRenderer {
                 continue;
             }
 
-            Coin coin = new Coin(world, shape);
-
-            coinObjects.add(coin.body);
+            Coin coin = new Coin(world, shape, object, coins);
             coinsArray.add(coin);
 
             shape.dispose();
         }
-        return coinObjects;
+        return ;
     }
 
 

@@ -2,6 +2,8 @@ package com.mygdx.game.figures;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.Sprite;
+import com.badlogic.gdx.maps.MapObject;
+import com.badlogic.gdx.maps.MapObjects;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.Contact;
@@ -14,51 +16,25 @@ import com.badlogic.gdx.physics.box2d.World;
 
 public class Coin {
     public Body body;
+    private MapObject mapObject;
     public Boolean isDestroyed = false;
     private ContactListener contactListener;
 
-    public Coin(World world, Shape shape) {
+    public Coin(World world, Shape shape, MapObject object) {
         BodyDef bd = new BodyDef();
         bd.type = BodyDef.BodyType.StaticBody;
         body = world.createBody(bd);
-        body.createFixture(shape, 1);
-        body.setUserData("coin");
+        body.createFixture(shape, 1).setUserData("coin");
+        body.setUserData(this);
 
-        createCollisionListener(world);
-    }
-    private void createCollisionListener(final World world) {
-        world.setContactListener(new ContactListener() {
-
-            @Override
-            public void beginContact(Contact contact) {
-
-            }
-
-            @Override
-            public void endContact(Contact contact) {
-
-            }
-
-            @Override
-            public void preSolve(Contact contact, Manifold oldManifold) {
-
-            }
-
-            @Override
-            public void postSolve(Contact contact, ContactImpulse impulse) {
-                Fixture fixtureA = contact.getFixtureA();
-                Fixture fixtureB = contact.getFixtureB();
-
-                if(fixtureA.getBody().getUserData() == "coin" && fixtureB.getBody().getUserData() == "character" || fixtureA.getBody().getUserData() == "character" && fixtureB.getBody().getUserData() == "coin") {
-                    isDestroyed = true;
-                    //consume(world);
-                }
-            }
-
-        });
+        mapObject = object;
     }
 
     public void consume(World world) {
         world.destroyBody(body);
     }
+
+    public void setForConsume() {isDestroyed = true;}
+
+    public void getMapObjectOfCoin() {}
 }
