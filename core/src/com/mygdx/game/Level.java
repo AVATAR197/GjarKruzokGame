@@ -18,7 +18,6 @@ public class Level {
     private TiledMap map;
     private World world;
     private Array<Coin> coins;
-    private Array<Coin> arrayToAddCoins;
 
 
     public Level(World world, float PPM) {
@@ -31,8 +30,6 @@ public class Level {
         TileMapRenderer.buildCoins(map, world, PPM);
 
         coins = TileMapRenderer.coinsArray;
-
-        arrayToAddCoins = new Array<Coin>();
     }
 
     public void draw(SpriteBatch spriteBatch, OrthographicCamera camera, World world) {
@@ -45,16 +42,14 @@ public class Level {
     private void update(OrthographicCamera camera, World world) {
         tiledMapRenderer.setView(camera);
 
-        for(int i = 0; i < coins.size; i++) {
-            if (coins.get(i).isDestroyed) {
-                coins.get(i).consume(world);
-            } else {
-                arrayToAddCoins.add(coins.get(i));
+        Array<Coin> removeCoins = new Array<>();
+        for (Coin coin: coins) {
+            if (coin.isDestroyed) {
+                coin.consume(world);
+                removeCoins.add(coin);
             }
         }
-        coins.clear();
-        coins.addAll(arrayToAddCoins);
-        arrayToAddCoins.clear();
+        coins.removeAll(removeCoins, true);
     }
 }
 

@@ -77,7 +77,15 @@ public class Project1 extends ApplicationAdapter {
 		world.setContactListener(new ContactListener() {
 			@Override
 			public void beginContact(Contact contact) {
-				//listener.updateScore(score);
+				Fixture fixtureA = contact.getFixtureA();
+				Fixture fixtureB = contact.getFixtureB();
+				//character and coin check
+				if(fixtureA.getUserData() == "coin" && fixtureB.getUserData() == "character") {
+					((Coin) fixtureA.getBody().getUserData()).setForConsume();
+				}
+				if (fixtureA.getUserData() == "character" && fixtureB.getUserData() == "coin") {
+					((Coin) fixtureA.getBody().getUserData()).setForConsume();
+				}
 			}
 
 			@Override
@@ -92,15 +100,7 @@ public class Project1 extends ApplicationAdapter {
 
 			@Override
 			public void postSolve(Contact contact, ContactImpulse impulse) {
-				Fixture fixtureA = contact.getFixtureA();
-				Fixture fixtureB = contact.getFixtureB();
 
-				if(fixtureA.getUserData() == "coin" && fixtureB.getUserData() == "character") {
-					((Coin) fixtureA.getBody().getUserData()).setForConsume();
-				}
-				if (fixtureA.getUserData() == "character" && fixtureB.getUserData() == "coin") {
-					((Coin) fixtureA.getBody().getUserData()).setForConsume();
-				}
 			}
 		});
 
@@ -136,7 +136,7 @@ public class Project1 extends ApplicationAdapter {
 		spriteBatch.end();
 
 		//debugRenderer
-		debugRenderer.render(world, camera.combined);
+		//debugRenderer.render(world, camera.combined);
 	}
 
 	public void update(float deltaTime) {
@@ -160,9 +160,9 @@ public class Project1 extends ApplicationAdapter {
 			character.jump();
 		if(Gdx.input.isKeyPressed(Input.Keys.A))
 			character.attack();
-		if(Gdx.input.isKeyPressed(Input.Keys.S))
+		//the bullet is shot just once on each key press
+		if(Gdx.input.isKeyJustPressed(Input.Keys.S))
 			character.shoot(world);
-		//todo make shooting one shot every 0.2s
 	}
 	private void updateCameraPosition() {
 		if(character.getPostion().x > cameraWidth / 2 && character.getPostion().x < worldWidth - cameraWidth / 2) {

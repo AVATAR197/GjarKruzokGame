@@ -41,10 +41,6 @@ public class Character {
     Animation<TextureRegion> jumpAnimation;
     TextureAtlas textureAtlas;
 
-    //projectile
-    private Projectile projectile;
-    private Array<Projectile> projectilesArr = new Array<Projectile>();
-
     public Character(World world) {
         bullets = new Array<Bullet>();
         //setting the characterHeight
@@ -172,16 +168,12 @@ public class Character {
     }
     public void shoot(World world) {
         //shoting bullet mechanism
-        bullets.add(new Bullet(getPostion().x, getPostion().y));
-
-//        //todo add some texture to the projectile
-//        projectile = new Projectile(body.getPosition().x, body.getPosition().y, world);
-//        projectilesArr.add(projectile);
-//        projectile.projectileShot(isFacingRight);
+        Bullet bullet = new Bullet(getPostion().x, getPostion().y, isFacingRight, world);
+        bullet.shoot();
+        bullets.add(bullet);
     }
     public void jump() {
-        //apply the force to the top
-        //body.applyLinearImpulse(0f, 0.5f, body.getPosition().x + characterHeight / 2, body.getPosition().y + characterHeight / 2, true);
+        //jump functionality
         if(grounded) {
             body.applyForceToCenter(0f, 70f, true);
             state = CharacterState.Jumping;
@@ -229,7 +221,7 @@ public class Character {
     public void draw(SpriteBatch spriteBatch, float deltaTime) {
         //render bullets
         for (Bullet bullet: bullets) {
-            bullet.render(spriteBatch);
+            bullet.render(spriteBatch, deltaTime);
         }
 
         TextureRegion currentFrame;
