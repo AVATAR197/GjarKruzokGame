@@ -25,10 +25,12 @@ public class Character {
 
     //basic parameters as height...
     private float characterHeight;
-    private float MAX_SPEED = 4f;
+    private float MAX_SPEED = 3f;
 
     //for contactListener
     private Fixture fixture;
+
+    private Array<Bullet> bullets;
 
     private boolean grounded;
     //animations
@@ -44,6 +46,7 @@ public class Character {
     private Array<Projectile> projectilesArr = new Array<Projectile>();
 
     public Character(World world) {
+        bullets = new Array<Bullet>();
         //setting the characterHeight
         this.characterHeight = 1.5f;
 
@@ -72,10 +75,6 @@ public class Character {
         //body.setUserData(this);
         circleShape.dispose();
 
-
-        //testing
-        initBodies(world);
-
         //setting the state for beginning
         state = CharacterState.Idle;
         stateTime = 0;
@@ -92,6 +91,16 @@ public class Character {
         runAttackAnimation= new Animation<TextureRegion>(0.07f, textureAtlas.findRegions("0_Fallen_Angels_Run Slashing"), Animation.PlayMode.NORMAL);
     }
     public void update(World world, float deltaTime) {
+        //update bullets
+        Array<Bullet> bulletsToRemove;
+        bulletsToRemove = new Array<Bullet>();
+        for (Bullet bullet: bullets) {
+            bullet.update(deltaTime);
+            if(bullet.remove) {
+                bulletsToRemove.add(bullet);
+            }
+        }
+        bullets.removeAll(bulletsToRemove, true);
         //animation update
         stateTime += deltaTime;
         if (movementStop <= 0 && body.getLinearVelocity().x != 0) {
@@ -162,16 +171,19 @@ public class Character {
         }
     }
     public void shoot(World world) {
-        //todo add some texture to the projectile
-        projectile = new Projectile(body.getPosition().x, body.getPosition().y, world);
-        projectilesArr.add(projectile);
-        projectile.projectileShot(isFacingRight);
+        //shoting bullet mechanism
+        bullets.add(new Bullet(getPostion().x, getPostion().y));
+
+//        //todo add some texture to the projectile
+//        projectile = new Projectile(body.getPosition().x, body.getPosition().y, world);
+//        projectilesArr.add(projectile);
+//        projectile.projectileShot(isFacingRight);
     }
     public void jump() {
         //apply the force to the top
-            //body.applyLinearImpulse(0f, 0.5f, body.getPosition().x + characterHeight / 2, body.getPosition().y + characterHeight / 2, true);
+        //body.applyLinearImpulse(0f, 0.5f, body.getPosition().x + characterHeight / 2, body.getPosition().y + characterHeight / 2, true);
         if(grounded) {
-            body.applyForceToCenter(0f, 100f, true);
+            body.applyForceToCenter(0f, 70f, true);
             state = CharacterState.Jumping;
             stateTime = 0;
         }
@@ -215,6 +227,11 @@ public class Character {
         Idle, Running, Attacking, RunAttack, Jumping
     }
     public void draw(SpriteBatch spriteBatch, float deltaTime) {
+        //render bullets
+        for (Bullet bullet: bullets) {
+            bullet.render(spriteBatch);
+        }
+
         TextureRegion currentFrame;
         switch(state) {
             case Jumping:
@@ -236,8 +253,4 @@ public class Character {
         spriteBatch.draw(currentFrame, body.getPosition().x - frameWidth / 2, body.getPosition().y - characterHeight / 2f, frameWidth, characterHeight);
     }
 
-    private void initBodies(World world) {
-        Sword sword = new Sword(body.getPosition().x, body.getPosition().y, world);
-        //todo connecting together character body + sword body and creating joint
-    }
 }

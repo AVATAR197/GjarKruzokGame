@@ -88,7 +88,7 @@ public class TileMapRenderer {
                 continue;
             }
 
-            Coin coin = new Coin(world, shape, object, coins);
+            Coin coin = new Coin(world, shape, object);
             coinsArray.add(coin);
 
             shape.dispose();

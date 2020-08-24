@@ -16,8 +16,11 @@ import com.badlogic.gdx.physics.box2d.Manifold;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.physics.box2d.WorldManifold;
 import com.badlogic.gdx.utils.Array;
+import com.mygdx.game.figures.Bullet;
 import com.mygdx.game.figures.Character;
 import com.mygdx.game.figures.Coin;
+
+import java.util.ArrayList;
 
 public class Project1 extends ApplicationAdapter {
 	//spritebatch definition
@@ -42,11 +45,6 @@ public class Project1 extends ApplicationAdapter {
 	private Level level;
 
 	private GameListener listener;
-
-	public Project1 (GameListener listener) {
-		super();
-		this.listener = listener;
-	}
 
 	public Project1 () {
 		super();
@@ -185,6 +183,7 @@ public class Project1 extends ApplicationAdapter {
 				for (int j = 0; j < manifold.getNumberOfContactPoints(); j++) {
 					touching &= (manifold.getPoints()[j].y < position.y + 0.0001f);
 				}
+				if(contact.getWorldManifold().getNormal().y <= 0) return false;
 
 				return touching;
 			}
