@@ -32,6 +32,10 @@ public class Level {
         coins = TileMapRenderer.coinsArray;
     }
 
+    public TiledMap  getMap() {
+        return map;
+    }
+
     public void draw(SpriteBatch spriteBatch, OrthographicCamera camera, World world) {
         update(camera, world);
 

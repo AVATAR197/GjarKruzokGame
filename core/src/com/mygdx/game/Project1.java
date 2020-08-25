@@ -6,6 +6,9 @@ import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.maps.MapObject;
+import com.badlogic.gdx.maps.MapObjects;
+import com.badlogic.gdx.maps.MapProperties;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.physics.box2d.Contact;
@@ -38,7 +41,7 @@ public class Project1 extends ApplicationAdapter {
 	private float cameraWidth;
 	private Box2DDebugRenderer debugRenderer;
 
-	private float PPM = 16f;
+	public static float PPM = 16f;
 	//character
 	Character character;
 	//level
@@ -81,11 +84,14 @@ public class Project1 extends ApplicationAdapter {
 				Fixture fixtureB = contact.getFixtureB();
 				//character and coin check
 				if(fixtureA.getUserData() == "coin" && fixtureB.getUserData() == "character") {
+					((Coin) fixtureA.getBody().getUserData()).getCell().setTile(null);
 					((Coin) fixtureA.getBody().getUserData()).setForConsume();
 				}
 				if (fixtureA.getUserData() == "character" && fixtureB.getUserData() == "coin") {
-					((Coin) fixtureA.getBody().getUserData()).setForConsume();
+					((Coin) fixtureB.getBody().getUserData()).getCell().setTile(null);
+					((Coin) fixtureB.getBody().getUserData()).setForConsume();
 				}
+				//TODO add bullet and tileset contactListener and remove bullet
 			}
 
 			@Override
@@ -136,7 +142,7 @@ public class Project1 extends ApplicationAdapter {
 		spriteBatch.end();
 
 		//debugRenderer
-		//debugRenderer.render(world, camera.combined);
+		debugRenderer.render(world, camera.combined);
 	}
 
 	public void update(float deltaTime) {
@@ -189,6 +195,10 @@ public class Project1 extends ApplicationAdapter {
 			}
 		}
 		return false;
+	}
+
+	private void removeCoinFromScreen (Coin coin) {
+		coin.getCell().setTile(null);
 	}
 
     @Override

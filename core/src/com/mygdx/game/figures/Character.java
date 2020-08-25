@@ -175,7 +175,7 @@ public class Character {
     public void jump() {
         //jump functionality
         if(grounded) {
-            body.applyForceToCenter(0f, 70f, true);
+            body.applyForceToCenter(0f, 130f, true);
             state = CharacterState.Jumping;
             stateTime = 0;
         }
