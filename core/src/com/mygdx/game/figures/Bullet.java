@@ -15,7 +15,7 @@ import com.badlogic.gdx.physics.box2d.World;
 public class Bullet {
     private Body body;
     public float SPEED = 200f;
-    public static final float BULLET_HEIGHT = 1f;
+    public static final float BULLET_HEIGHT = 0.9f;
     private static TextureAtlas textureAtlas;
     private float stateTime;
 
@@ -39,7 +39,8 @@ public class Bullet {
         fixtureDef.isSensor = true;
         fixtureDef.friction = 0;
 
-        body.createFixture(fixtureDef);
+        Fixture fixture = body.createFixture(fixtureDef);
+        fixture.setUserData("bullet");
         body.setUserData(this);
 
         if (textureAtlas == null) {
@@ -64,6 +65,10 @@ public class Bullet {
 
     public void setToRemove() {
         remove = true;
+    }
+
+    public void destroy(World world) {
+        world.destroyBody(body);
     }
 
     public void shoot() {

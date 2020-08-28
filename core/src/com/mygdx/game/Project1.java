@@ -92,6 +92,12 @@ public class Project1 extends ApplicationAdapter {
 					((Coin) fixtureB.getBody().getUserData()).setForConsume();
 				}
 				//TODO add bullet and tileset contactListener and remove bullet
+				if(fixtureA.getUserData() == "bullet" && fixtureB.getUserData() == "tile") {
+					((Bullet) fixtureA.getBody().getUserData()).setToRemove();
+				}
+				if (fixtureA.getUserData() == "tile" && fixtureB.getUserData() == "bullet") {
+					((Bullet) fixtureB.getBody().getUserData()).setToRemove();
+				}
 			}
 
 			@Override

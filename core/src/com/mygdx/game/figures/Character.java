@@ -94,6 +94,7 @@ public class Character {
             bullet.update(deltaTime);
             if(bullet.remove) {
                 bulletsToRemove.add(bullet);
+                bullet.destroy(world);
             }
         }
         bullets.removeAll(bulletsToRemove, true);
